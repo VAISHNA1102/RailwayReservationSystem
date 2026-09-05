@@ -10,7 +10,7 @@ services:
       - key: PORT
         value: 10000
       - key: EUREKA_HOSTNAME
-        value: railway-eureka-server
+        value: railway-eureka-server.onrender.com
 
   - type: web
     name: railway-config-server
@@ -21,7 +21,7 @@ services:
     healthCheckPath: /actuator/health
     envVars:
       - key: PORT
-        value: 8888
+        value: 10000
       - key: CONFIG_REPOSITORY_LOCATION
         value: file:/app/config-repository
       - key: EUREKA_DEFAULT_ZONE
