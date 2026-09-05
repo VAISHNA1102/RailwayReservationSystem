@@ -1,0 +1,42 @@
+.admin-dashboard-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 32px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f7f5ff;
+  box-shadow: 0 1px 8px #7f5af011;
+}
+
+.admin-dashboard-tab-btn {
+  flex: 1;
+  background: transparent;
+  color: #5a3ac7;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  padding: 16px 0;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  outline: none;
+}
+
+.admin-dashboard-tab-btn.active {
+  background: linear-gradient(90deg,#7f5af0,#5a3ac7);
+  color: #fff;
+}
+
+.admin-dashboard-tab-btn:hover:not(.active) {
+  background: rgba(127, 90, 240, 0.1);
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard-tabs {
+    flex-direction: column;
+  }
+  
+  .admin-dashboard-tab-btn {
+    font-size: 16px;
+    padding: 12px 0;
+  }
+} 

@@ -1,0 +1,228 @@
+.hero-section {
+  background-color: #ffffff;
+  color: #1f1f1f;
+  padding: 60px 20px 60px 20px; /* 🔁 Changed from 100px to 60px */
+  margin: 0;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-text h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 28px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.hero-buttons .btn {
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-light {
+  background-color: #7f5af0;
+  color: white;
+  border: none;
+}
+
+.btn-light:hover {
+  background-color: #5a3ac7;
+}
+
+.btn-outline-primary {
+  color: #5a3ac7;
+  border: 2px solid #5a3ac7;
+}
+
+.btn-outline-primary:hover {
+  background-color: #5a3ac7;
+  color: white;
+}
+
+/* Benefits Section - row with boxes */
+.benefits-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.benefit-box {
+  flex: 1 1 calc(25% - 20px);
+  background-color: #f7f5ff;
+  padding: 24px 16px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(90, 60, 200, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.benefit-box:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-box span {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.benefit-box h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #5a3ac7;
+}
+
+.benefit-box p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  .benefit-box {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .benefit-box {
+    flex: 1 1 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+}
+
+/* Gradient background for hero section */
+.hero-gradient-bg {
+  background: linear-gradient(120deg, #f7f3fd 60%, #e9e3fa 100%);
+  min-height: 520px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-main-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1f1f1f;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.brand-gradient {
+  background: linear-gradient(90deg, #7f5af0, #5a3ac7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 32px;
+  font-weight: 500;
+}
+
+.animated-fadein {
+  animation: fadeInHero 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+@keyframes fadeInHero {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-cta-btn {
+  font-size: 1.1rem;
+  padding: 14px 36px;
+  border-radius: 12px;
+  margin: 0 8px 8px 0;
+  font-weight: 700;
+  box-shadow: 0 2px 12px #7f5af033;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.btn-light.hero-cta-btn {
+  background: linear-gradient(90deg, #7f5af0 60%, #5a3ac7 100%);
+  color: #fff;
+  border: none;
+}
+
+.btn-light.hero-cta-btn:hover {
+  background: linear-gradient(90deg, #5a3ac7 60%, #4421b4 100%);
+  color: #fff;
+}
+
+.btn-outline-primary.hero-cta-btn {
+  border: 2px solid #7f5af0;
+  color: #7f5af0;
+  background: #fff;
+}
+
+.btn-outline-primary.hero-cta-btn:hover {
+  background: #7f5af0;
+  color: #fff;
+}
+
+.benefit-anim {
+  animation: benefitFadeIn 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+@keyframes benefitFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 992px) {
+  .hero-main-title {
+    font-size: 2.1rem;
+  }
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-main-title {
+    font-size: 1.3rem;
+  }
+  .hero-buttons .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

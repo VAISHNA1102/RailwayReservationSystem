@@ -1,0 +1,280 @@
+/* Remove space reserved for close button */
+.Toastify__close-button {
+  display: none;
+}
+
+/* Keep toast UI clean */
+.Toastify__toast {
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Segoe UI", sans-serif;
+  padding: 12px 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(135deg, #ffe6e6, #ffebee);
+  color: #c62828;
+  border-left: 6px solid #e53935;
+  box-shadow: 0 4px 20px rgba(229,57,53,0.2);
+}
+
+.Toastify__toast--success {
+  background: linear-gradient(135deg, #e6ffed, #f1f8e9);
+  color: #2e7d32;
+  border-left: 6px solid #43a047;
+  box-shadow: 0 4px 20px rgba(67,160,71,0.2);
+}
+
+.Toastify__toast--info {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  border-left: 6px solid #2196f3;
+}
+
+.Toastify__toast-icon {
+  margin-right: 10px;
+}
+
+.login-card, .register-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 24px;
+  box-shadow: 0 8px 40px 0 rgba(127,90,240,0.15);
+  padding: 40px 36px 32px 36px;
+  max-width: 450px;
+  margin: 0 auto;
+  border: 2px solid #e0dfff;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-card::before, .register-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #7f5af0, #5a3ac7, #7f5af0);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 200% 0; }
+  50% { background-position: -200% 0; }
+}
+
+.login-heading {
+  font-weight: 700;
+  color: #5a3ac7;
+  letter-spacing: 0.5px;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-input-group label {
+  font-weight: 600;
+  color: #7f5af0;
+  margin-bottom: 6px;
+}
+
+.login-input-group .form-control, .register-input-group .form-control {
+  border-radius: 12px;
+  border: 2px solid #e0dfff;
+  background: #f7f5ff;
+  font-size: 1.1rem;
+  color: #5a3ac7;
+  font-weight: 500;
+  padding: 14px 16px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.login-input-group .form-control:focus, .register-input-group .form-control:focus {
+  border-color: #7f5af0;
+  box-shadow: 0 0 0 3px rgba(127,90,240,0.15);
+  background: #f3f0ff;
+  transform: translateY(-1px);
+}
+
+.login-input-group .form-control.is-invalid, .register-input-group .form-control.is-invalid {
+  border-color: #e74c3c;
+  background: #fdf2f2;
+  box-shadow: 0 0 0 3px rgba(231,76,60,0.15);
+}
+
+.invalid-feedback {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #e74c3c;
+  font-weight: 600;
+  padding: 8px 12px;
+  background: rgba(231,76,60,0.1);
+  border-radius: 8px;
+  border-left: 4px solid #e74c3c;
+}
+
+.login-eye-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #7f5af0;
+  font-size: 1.3rem;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.login-eye-btn:hover,
+.login-eye-btn:focus {
+  opacity: 1;
+  color: #4421b4;
+}
+
+.login-gradient-btn {
+  background: linear-gradient(135deg, #7f5af0, #5a3ac7);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.15rem;
+  border: none;
+  border-radius: 14px;
+  padding: 16px 0;
+  margin-top: 12px;
+  box-shadow: 0 4px 20px rgba(127,90,240,0.25);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-gradient-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.login-gradient-btn:hover::before {
+  left: 100%;
+}
+
+.login-gradient-btn:hover,
+.login-gradient-btn:focus {
+  background: linear-gradient(135deg, #5a3ac7, #4421b4);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(127,90,240,0.4);
+}
+
+.login-gradient-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 2px 10px rgba(127,90,240,0.15);
+}
+
+.login-forgot-link {
+  color: #7f5af0;
+  font-size: 0.98rem;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.login-forgot-link:hover,
+.login-forgot-link:focus {
+  color: #4421b4;
+  text-decoration: underline wavy;
+}
+
+.register-gradient-btn {
+  background: linear-gradient(135deg, #7f5af0, #5a3ac7);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 14px;
+  padding: 18px 0;
+  margin-top: 16px;
+  box-shadow: 0 4px 20px rgba(127,90,240,0.25);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-gradient-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.register-gradient-btn:hover::before {
+  left: 100%;
+}
+
+.register-gradient-btn:hover,
+.register-gradient-btn:focus {
+  background: linear-gradient(135deg, #5a3ac7, #2e29b0);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(127,90,240,0.4);
+}
+
+.register-gradient-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 2px 10px rgba(127,90,240,0.15);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #7f5af0;
+  letter-spacing: 0.5px;
+}
+
+.register-input-group label {
+  font-weight: 600;
+  color: #7f5af0;
+  margin-bottom: 6px;
+  font-size: 1.05rem;
+  letter-spacing: 0.2px;
+}
+
+.login-register-link {
+  display: block;
+  text-align: center;
+  margin-top: 18px;
+  font-size: 1.05rem;
+  color: #222;
+  font-weight: 500;
+}
+
+.login-register-link a {
+  color: #7f5af0;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.login-register-link a:hover,
+.login-register-link a:focus {
+  color: #5a3ac7;
+  text-decoration: underline;
+}

@@ -1,0 +1,23 @@
+.footer-section {
+  width: 100%;
+  background: linear-gradient(120deg, #7f5af0 60%, #5a3ac7 100%);
+  color: #fff;
+  padding: 15px 10px;
+  margin: 0;
+  box-shadow: 0 -2px 24px #7f5af033;
+  border-top: 1px solid #e0dfff33;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.copyright-area {
+  font-size: 0.9rem;
+  font-weight: 500;
+}

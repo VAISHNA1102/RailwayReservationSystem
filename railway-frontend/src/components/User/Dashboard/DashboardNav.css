@@ -1,0 +1,32 @@
+.dashboard-navbar {
+  background: linear-gradient(135deg, #7f5af0, #5a3ac7);
+  box-shadow: 0 4px 12px rgba(90, 60, 200, 0.2);
+  padding: 12px 20px;
+}
+
+.dashboard-navbar .nav-link {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.dashboard-navbar .nav-link:hover {
+  color: #ffcc00; /* highlight yellow/golden */
+}
+
+.dashboard-navbar .dropdown-toggle {
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+
+.dashboard-navbar .dropdown-menu {
+  background-color: #003366;
+}
+
+.dashboard-navbar .dropdown-item {
+  color: #ffffff;
+}
+
+.dashboard-navbar .dropdown-item:hover {
+  background-color: #0059b3;
+}

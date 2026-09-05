@@ -1,0 +1,151 @@
+/* RegisterPage.css */
+
+.register-page-2col {
+  display: flex;
+  min-height: 100vh;
+  background: #f7f5ff;
+  max-width: 750px;
+  margin: 0 auto;
+  border-radius: 32px;
+  box-shadow: 0 0 48px 0 rgba(127,90,240,0.10);
+  overflow: hidden;
+}
+
+.register-emoji-col {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #9a6cf0 60%, #5a3ac7 100%);
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  box-shadow: 0 0 32px 0 rgba(127,90,240,0.07);
+  min-height: 100vh;
+  position: relative;
+}
+
+.register-train-emoji {
+  font-size: 8rem;
+  filter: drop-shadow(0 4px 16px #bbaaff44);
+  animation: register-train-zoom 2.2s infinite alternate cubic-bezier(.4,0,.2,1);
+  display: inline-block;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes register-train-zoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.18); }
+}
+
+.register-emoji-col::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #e0dfff 0%, #c7bfff 60%, #ede6fa 100%);
+  filter: blur(18px) opacity(0.7);
+  z-index: 1;
+}
+
+.register-emoji-tagline {
+  color: #f7f5ff;
+  font-size: 1.13rem;
+  font-weight: 500;
+  margin-top: 18px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  text-shadow: 0 2px 12px #5a3ac7;
+}
+
+.register-form-col {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  box-shadow: 0 0 32px 0 rgba(127,90,240,0.07);
+  min-height: 100vh;
+  padding: 0;
+}
+
+.register-form-center {
+  width: 100%;
+  max-width: 410px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 18px;
+  /* box-shadow: 0 8px 40px 0 rgba(127,90,240,0.13), 0 1.5px 0 #e0dfff; */
+  padding: 38px 32px 30px 32px;
+  position: relative;
+  z-index: 2;
+  animation: fade-in-card 0.8s cubic-bezier(.4,0,.2,1);
+}
+
+@keyframes fade-in-card {
+  from { opacity: 0; transform: translateY(30px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.register-heading {
+  font-weight: 800;
+  color: #5a3ac7;
+  letter-spacing: 0.5px;
+  font-size: 2.2rem;
+  margin-bottom: 2.1rem;
+  text-align: center;
+  text-shadow: 0 2px 12px #e0dfff;
+}
+
+@media (max-width: 900px) {
+  .register-page-2col {
+    flex-direction: column;
+    min-height: unset;
+    max-width: 98vw;
+    border-radius: 0;
+  }
+  .register-emoji-col, .register-form-col {
+    border-radius: 0;
+    box-shadow: none;
+    padding: 24px 0;
+    min-height: unset;
+  }
+  .register-form-center {
+    box-shadow: 0 4px 24px 0 rgba(127,90,240,0.10);
+    padding: 28px 10px 22px 10px;
+  }
+  .register-emoji-col::before {
+    width: 140px;
+    height: 140px;
+    filter: blur(12px) opacity(0.7);
+  }
+}
+
+@media (max-width: 600px) {
+  .register-train-emoji {
+    font-size: 4.2rem;
+    padding: 10px 10px 6px 10px;
+  }
+  .register-form-center {
+    padding: 12px 2vw 10px 2vw;
+    max-width: 98vw;
+  }
+  .register-emoji-col::before {
+    width: 90px;
+    height: 90px;
+    filter: blur(8px) opacity(0.7);
+  }
+} 

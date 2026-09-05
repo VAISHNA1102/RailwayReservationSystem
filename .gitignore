@@ -1,0 +1,43 @@
+# Maven build output
+**/target/
+**/*.jar
+**/*.war
+**/*.class
+
+# Maven wrapper cache
+**/.mvn/wrapper/maven-wrapper.jar
+
+# Lombok backup files
+**/*.java~
+**/*.properties~
+**/*.xml~
+
+# Node / Frontend
+railway-frontend/node_modules/
+railway-frontend/dist/
+
+# Environment variables / secrets
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+**/*.log
+
+# Spring Boot config with secrets (keep config-repository but exclude passwords if needed)
+# Uncomment below if you want to exclude the config-repository from git:
+# Train/config-repository/

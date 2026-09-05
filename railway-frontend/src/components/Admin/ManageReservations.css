@@ -1,0 +1,153 @@
+.manage-reservations-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.manage-reservations-refresh {
+  background: #fff;
+  color: #7f5af0;
+  border: 2px solid #7f5af0;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 24px;
+  box-shadow: 0 2px 8px #7f5af033;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.manage-reservations-refresh:hover {
+  background: #7f5af0;
+  color: #fff;
+}
+
+.manage-reservations-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.manage-reservations-modal-content {
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  overflow: auto;
+  box-shadow: 0 20px 60px rgba(127,90,240,0.3);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid #e0dfff;
+}
+
+.manage-reservations-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.manage-reservations-modal-title {
+  margin: 0;
+  color: #5a3ac7;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.manage-reservations-modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.manage-reservations-modal-close:hover {
+  background: #f0f0f0;
+}
+
+.manage-reservations-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.manage-reservations-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.manage-reservations-modal-field {
+  background: #f7f5ff;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e0dfff;
+}
+
+.manage-reservations-passengers-title {
+  color: #5a3ac7;
+  font-weight: 700;
+  margin-bottom: 12px;
+  margin-top: 16px;
+}
+
+.manage-reservations-passenger-item {
+  background: #f7f5ff;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e0dfff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.manage-reservations-passenger-name {
+  font-weight: 600;
+  color: #5a3ac7;
+}
+
+.manage-reservations-passenger-details {
+  color: #666;
+}
+
+.manage-reservations-passenger-seat {
+  color: #28a745;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .manage-reservations-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .manage-reservations-title {
+    font-size: 24px;
+  }
+  
+  .manage-reservations-modal-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .manage-reservations-passenger-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+} 

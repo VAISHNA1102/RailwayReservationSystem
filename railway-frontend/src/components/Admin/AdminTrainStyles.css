@@ -1,0 +1,107 @@
+/* src/pages/Admin/AdminTrainStyles.css - Admin Train Management Styles */
+
+/* Admin Train Form Styles */
+.manage-trains h4,
+.manage-trains h5 {
+  color: #7f5af0;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.manage-trains .form-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.manage-trains input.form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.manage-trains input[type="time"] {
+  font-weight: 500;
+}
+
+.manage-trains .btn-primary {
+  background: linear-gradient(135deg, #7f5af0, #5a3ac7);
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.manage-trains .btn-primary:hover {
+  background: linear-gradient(135deg, #5a3ac7, #4421b4);
+}
+
+.manage-trains .btn-secondary {
+  background-color: #6c757d;
+  border: none;
+  font-weight: 600;
+  color: white;
+}
+
+.manage-trains .btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.manage-trains .table th {
+  background-color: #7f5af0;
+  color: white;
+}
+
+.manage-trains .table td {
+  vertical-align: middle;
+}
+
+/* Action Buttons */
+.manage-trains .btn-warning {
+  background-color: #ffc107;
+  color: black;
+  border: none;
+  font-weight: 600;
+}
+
+.manage-trains .btn-warning:hover {
+  background-color: #e0a800;
+}
+
+.manage-trains .btn-danger {
+  background-color: #dc3545;
+  border: none;
+  font-weight: 600;
+}
+
+.manage-trains .btn-danger:hover {
+  background-color: #bb2d3b;
+}
+
+/* Train Class Row Styling */
+.train-class-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.train-class-row > div {
+  flex: 1;
+  min-width: 140px;
+}
+
+/* Remove Button Alignment */
+.train-class-row .remove-btn {
+  margin-top: 0;
+  align-self: flex-start;
+  white-space: nowrap;
+}
+
+/* Add some spacing between Train Classes section and Train List table */
+.train-classes-section {
+  margin-bottom: 30px;
+} 
