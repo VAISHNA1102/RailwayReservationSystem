@@ -25,7 +25,7 @@ services:
       - key: CONFIG_REPOSITORY_LOCATION
         value: file:/app/config-repository
       - key: EUREKA_DEFAULT_ZONE
-        value: "http://railway-eureka-server:10000/eureka"
+        value: "https://railway-eureka-server.onrender.com/eureka"
 
   - type: web
     name: railway-user-service
@@ -38,9 +38,9 @@ services:
       - key: PORT
         value: 10000
       - key: CONFIG_SERVER_URL
-        value: "http://railway-config-server:8888"
+        value: "https://railway-config-server.onrender.com"
       - key: EUREKA_DEFAULT_ZONE
-        value: "http://railway-eureka-server:10000/eureka"
+        value: "https://railway-eureka-server.onrender.com/eureka"
       - key: USERSERVICE_DB_URL
         sync: false
       - key: DB_USERNAME
@@ -59,9 +59,9 @@ services:
       - key: PORT
         value: 10000
       - key: CONFIG_SERVER_URL
-        value: "http://railway-config-server:8888"
+        value: "https://railway-config-server.onrender.com"
       - key: EUREKA_DEFAULT_ZONE
-        value: "http://railway-eureka-server:10000/eureka"
+        value: "https://railway-eureka-server.onrender.com/eureka"
       - key: TRAINSERVICE_DB_URL
         sync: false
       - key: DB_USERNAME
@@ -80,9 +80,9 @@ services:
       - key: PORT
         value: 10000
       - key: CONFIG_SERVER_URL
-        value: "http://railway-config-server:8888"
+        value: "https://railway-config-server.onrender.com"
       - key: EUREKA_DEFAULT_ZONE
-        value: "http://railway-eureka-server:10000/eureka"
+        value: "https://railway-eureka-server.onrender.com/eureka"
       - key: PAYMENTSERVICE_DB_URL
         sync: false
       - key: DB_USERNAME
@@ -121,9 +121,9 @@ services:
       - key: PORT
         value: 10000
       - key: CONFIG_SERVER_URL
-        value: "http://railway-config-server:8888"
+        value: "https://railway-config-server.onrender.com"
       - key: EUREKA_DEFAULT_ZONE
-        value: "http://railway-eureka-server:10000/eureka"
+        value: "https://railway-eureka-server.onrender.com/eureka"
       - key: RESERVATIONSERVICE_DB_URL
         sync: false
       - key: DB_USERNAME
@@ -142,7 +142,7 @@ services:
       - key: PORT
         value: 10000
       - key: EUREKA_DEFAULT_ZONE
-        value: "http://railway-eureka-server:10000/eureka"
+        value: "https://railway-eureka-server.onrender.com/eureka"
       - key: APP_CORS_ALLOWED_ORIGINS
         value: "https://railway-frontend.onrender.com"
 
