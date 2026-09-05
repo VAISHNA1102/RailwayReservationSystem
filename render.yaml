@@ -21,7 +21,7 @@ services:
     healthCheckPath: /actuator/health
     envVars:
       - key: PORT
-        value: 10000
+        value: 8888
       - key: CONFIG_REPOSITORY_LOCATION
         value: file:/app/config-repository
       - key: EUREKA_DEFAULT_ZONE
@@ -38,7 +38,7 @@ services:
       - key: PORT
         value: 10000
       - key: CONFIG_SERVER_URL
-        value: "http://railway-config-server:10000"
+        value: "http://railway-config-server:8888"
       - key: EUREKA_DEFAULT_ZONE
         value: "http://railway-eureka-server:10000/eureka"
       - key: USERSERVICE_DB_URL
@@ -59,7 +59,7 @@ services:
       - key: PORT
         value: 10000
       - key: CONFIG_SERVER_URL
-        value: "http://railway-config-server:10000"
+        value: "http://railway-config-server:8888"
       - key: EUREKA_DEFAULT_ZONE
         value: "http://railway-eureka-server:10000/eureka"
       - key: TRAINSERVICE_DB_URL
@@ -80,7 +80,7 @@ services:
       - key: PORT
         value: 10000
       - key: CONFIG_SERVER_URL
-        value: "http://railway-config-server:10000"
+        value: "http://railway-config-server:8888"
       - key: EUREKA_DEFAULT_ZONE
         value: "http://railway-eureka-server:10000/eureka"
       - key: PAYMENTSERVICE_DB_URL
@@ -121,7 +121,7 @@ services:
       - key: PORT
         value: 10000
       - key: CONFIG_SERVER_URL
-        value: "http://railway-config-server:10000"
+        value: "http://railway-config-server:8888"
       - key: EUREKA_DEFAULT_ZONE
         value: "http://railway-eureka-server:10000/eureka"
       - key: RESERVATIONSERVICE_DB_URL
